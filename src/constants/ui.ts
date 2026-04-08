@@ -375,6 +375,7 @@ export const biosureLanding = {
     sub: "Real feedback from lab directors and technicians who left spreadsheets behind.",
     titleAccent: "leading labs",
     layout: {
+      maxCards: 5,
       cards: [
         { type: "featured" as const, testimonialIndex: 2 },
         { type: "default" as const, testimonialIndex: 0 },

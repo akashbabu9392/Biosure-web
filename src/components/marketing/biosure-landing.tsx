@@ -603,7 +603,9 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
             </Reveal>
 
             <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {biosureLanding.testimonials.layout.cards.map((card, idx) => {
+              {biosureLanding.testimonials.layout.cards
+                .slice(0, biosureLanding.testimonials.layout.maxCards)
+                .map((card, idx) => {
                 const t =
                   "testimonialIndex" in card
                     ? biosureLanding.testimonials.items[card.testimonialIndex]
