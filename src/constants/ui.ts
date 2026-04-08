@@ -26,7 +26,7 @@ export const biosureLanding = {
     primaryCta: "Start free trial",
     secondaryCta: "Watch 3-min demo",
     dashboardPreview: {
-      src: "/dashboard.jpeg",
+      src: "/Rounded rectangle.png",
       alt: "BioSure dashboard preview",
     },
     trustItems: [

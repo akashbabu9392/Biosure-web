@@ -109,20 +109,10 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
 
             <div className="mt-16">
               <Reveal delay={0.55} y={34}>
-                <div className="relative mx-auto max-w-[1100px]">
+                <div className="relative mx-auto w-full max-w-[1100px]">
                   <div className="relative rounded-2xl border border-[color:var(--border)] bg-[linear-gradient(135deg,rgba(0,194,168,0.35),rgba(0,112,243,0.2),transparent_60%)] p-[1px]">
                     <div className="rounded-[17px] bg-[var(--surface)] shadow-[0_40px_120px_rgba(0,0,0,0.8)]">
-                      {/* Topbar */}
-                      <div className="flex items-center gap-3 border-b border-[color:var(--border)] bg-[rgba(255,255,255,0.02)] px-5 py-3">
-                        <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
-                        <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
-                        <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-                        <span className="ml-3 rounded-md bg-[rgba(255,255,255,0.05)] px-3 py-1 text-[.72rem] font-[var(--font-mono)] text-[color:var(--muted)]">
-                          app.biosure.io/dashboard
-                        </span>
-                      </div>
-
-                      <div className="w-full bg-[rgba(0,0,0,0.18)]">
+                      <div className="relative w-full overflow-hidden rounded-[17px] bg-[rgba(0,0,0,0.18)]">
                         <Image
                           src={biosureLanding.hero.dashboardPreview.src}
                           alt={biosureLanding.hero.dashboardPreview.alt}
@@ -130,6 +120,7 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                           height={736}
                           sizes="(max-width: 640px) 100vw, (max-width: 1200px) 92vw, 1100px"
                           quality={100}
+                          unoptimized
                           className="h-auto w-full object-contain"
                           priority
                         />
