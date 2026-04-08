@@ -157,69 +157,75 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
         </section>
 
         {/* FEATURES */}
-        <section id="features" className="px-6 pb-20 pt-20">
-          <div className="mx-auto max-w-[1100px]">
-            <Reveal delay={0.05}>
-              <div className="inline-flex items-center gap-2 text-[color:var(--accent)] text-[.75rem] font-semibold uppercase tracking-[.8px]">
-                {biosureLanding.features.badge}
-              </div>
-              <h2 className="mt-4 font-[var(--font-serif)] text-[clamp(2rem,4vw,3.2rem)] leading-[1.1] tracking-[-1px]">
-                {biosureLanding.features.title}
-              </h2>
-              <p className="mt-4 max-w-[560px] text-[1rem] leading-[1.7] text-[color:var(--muted)]">
-                {biosureLanding.features.sub}
-              </p>
-            </Reveal>
-
-            <div className="mt-14 grid grid-cols-3 gap-4 lg:gap-5 max-md:grid-cols-1 md:grid-cols-2">
-              {biosureLanding.features.cards.map((card) => (
-                <Reveal key={card.title} delay={0.1} y={30}>
-                  <div
-                    className={[
-                      "relative overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[var(--surface)] p-7 transition hover:-translate-y-[3px]",
-                      card.layout === "span2Tall" ? "md:col-span-2 md:min-h-[280px]" : "",
-                    ].join(" ")}
-                  >
-                    <div className="pointer-events-none absolute left-0 right-0 top-0 h-[2px] bg-[linear-gradient(90deg,var(--accent),var(--accent2))] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <div className="h-[40px] w-[40px] rounded-xl border border-[rgba(0,194,168,0.2)] bg-[rgba(0,194,168,0.18)] flex items-center justify-center text-[1.1rem] mb-5">
-                      <FeatureIcon
-                        id={card.iconId}
-                        className="h-6 w-6 text-[color:var(--accent)]"
-                      />
-                    </div>
-                    <div className="font-[var(--font-serif)] text-[1.15rem] text-[color:var(--text)] mb-2">
-                      {card.title}
-                    </div>
-                    <div className="text-[.85rem] leading-[1.65] text-[color:var(--muted)]">
-                      {card.desc}
-                    </div>
-                    {card.layout === "span2Tall" ? (
-                      <div className="mt-5">
-                        <div className="flex items-end gap-1 h-[48px]">
-                          {[
-                            40, 65, 45, 80, 55, 90, 70, 60, 85, 75, 95, 88,
-                          ].map((h, i) => (
-                            <div
-                              key={i}
-                              className="mini-bar flex-1 rounded-[3px_3px_0_0] bg-[linear-gradient(180deg,var(--accent)_0%,rgba(0,194,168,0.3)_100%)] opacity-75"
-                              style={
-                                {
-                                  height: `${h}%`,
-                                  animationDelay: `${i * 0.05}s`,
-                                  animation: "barGrow .8s ease both",
-                                } as React.CSSProperties
-                              }
-                            />
-                          ))}
-                        </div>
+        <section id="features" className="relative overflow-hidden">
+          <div className="relative left-1/2 w-screen -translate-x-1/2">
+            <div className="premium-panel-bleed">
+              <div className="premium-panel">
+                <div className="premium-panel__surface">
+                  <div className="relative z-10 mx-auto max-w-[1100px] px-6 py-20">
+                    <Reveal delay={0.05}>
+                      <div className="inline-flex items-center gap-2 text-[color:var(--accent)] text-[.75rem] font-semibold uppercase tracking-[.8px]">
+                        {biosureLanding.features.badge}
                       </div>
-                    ) : null}
-                    <div className="mt-4 inline-flex rounded-full border border-[rgba(0,194,168,0.15)] bg-[rgba(0,194,168,0.08)] px-3 py-1 text-[.7rem] font-semibold text-[color:var(--accent)]">
-                      {card.tag}
+                      <h2 className="mt-4 font-[var(--font-serif)] text-[clamp(2rem,4vw,3.2rem)] leading-[1.1] tracking-[-1px] text-[color:var(--text)]">
+                        {biosureLanding.features.title}
+                      </h2>
+                      <p className="mt-4 max-w-[560px] text-[1rem] leading-[1.7] text-[color:var(--muted)]">
+                        {biosureLanding.features.sub}
+                      </p>
+                    </Reveal>
+
+                    <div className="mt-14 grid grid-cols-3 gap-4 lg:gap-5 max-md:grid-cols-1 md:grid-cols-2">
+                      {biosureLanding.features.cards.map((card) => (
+                        <Reveal key={card.title} delay={0.1} y={30}>
+                          <div
+                            className={[
+                              "premium-card group relative overflow-hidden rounded-2xl p-7 hover:-translate-y-[3px]",
+                              card.layout === "span2Tall" ? "md:col-span-2 md:min-h-[280px]" : "",
+                            ].join(" ")}
+                          >
+                            <div className="pointer-events-none absolute left-0 right-0 top-0 h-[2px] bg-[linear-gradient(90deg,var(--accent),var(--accent2))] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                            <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-xl border border-[rgba(0,194,168,0.2)] bg-[rgba(0,194,168,0.12)] text-[1.1rem]">
+                              <FeatureIcon
+                                id={card.iconId}
+                                className="h-6 w-6 text-[color:var(--accent)]"
+                              />
+                            </div>
+                            <div className="mb-2 font-[var(--font-serif)] text-[1.15rem] text-[color:var(--text)]">
+                              {card.title}
+                            </div>
+                            <div className="text-[.85rem] leading-[1.65] text-[color:var(--muted)]">
+                              {card.desc}
+                            </div>
+                            {card.layout === "span2Tall" ? (
+                              <div className="mt-5">
+                                <div className="flex h-[48px] items-end gap-1">
+                                  {biosureLanding.features.miniBars.map((h, i) => (
+                                    <div
+                                      key={`${card.title}-bar-${i}`}
+                                      className="mini-bar flex-1 rounded-[3px_3px_0_0] bg-[linear-gradient(180deg,var(--accent)_0%,rgba(0,194,168,0.3)_100%)] opacity-75"
+                                      style={
+                                        {
+                                          height: `${h}%`,
+                                          animationDelay: `${i * 0.05}s`,
+                                          animation: "barGrow .8s ease both",
+                                        } as React.CSSProperties
+                                      }
+                                    />
+                                  ))}
+                                </div>
+                              </div>
+                            ) : null}
+                            <div className="mt-4 inline-flex rounded-full border border-[rgba(0,194,168,0.15)] bg-[rgba(0,194,168,0.08)] px-3 py-1 text-[.7rem] font-semibold text-[color:var(--accent)]">
+                              {card.tag}
+                            </div>
+                          </div>
+                        </Reveal>
+                      ))}
                     </div>
                   </div>
-                </Reveal>
-              ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -52,6 +52,7 @@ export const biosureLanding = {
     title: "Everything your lab needs. Nothing you don't.",
     sub:
       "BioSure replaces a messy stack of spreadsheets, Word docs, and email threads with a single, purpose-built platform that your whole team — and your clients — can use.",
+    miniBars: [40, 65, 45, 80, 55, 90, 70, 60, 85, 75, 95, 88],
     cards: [
       {
         layout: "span2Tall" as const,
