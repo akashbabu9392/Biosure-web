@@ -384,6 +384,7 @@ export const biosureLanding = {
         { type: "default" as const, testimonialIndex: 5 },
         { type: "default" as const, testimonialIndex: 6 },
         { type: "default" as const, testimonialIndex: 7 },
+        { type: "default" as const, testimonialIndex: 8 },
       ],
     },
     items: [
@@ -442,6 +443,13 @@ export const biosureLanding = {
         initials: "JB",
         name: "Julian Benegas",
         role: "CEO · Apex Compounding",
+      },
+      {
+        quote:
+          '"Implementation was refreshingly fast. We were running real samples through the workflow the same day, and our team adopted it immediately because the portal made everything obvious."',
+        initials: "LH",
+        name: "Lena Hart",
+        role: "Lab Operations · Meridian EM Lab",
       },
     ],
   },
