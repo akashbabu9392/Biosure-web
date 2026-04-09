@@ -49,8 +49,42 @@ export const biosureLanding = {
       "CrestPath Labs",
     ],
   },
+  /** Stock photography (Unsplash) used as section visuals — Unsplash License */
+  landingInfographics: {
+    photoCreditLine: "Photo: Unsplash (Unsplash License — free for commercial use).",
+    features: {
+      src: "/marketing/landing-features-v3.jpg",
+      alt: "Lab technician pipetting samples into microtubes at a laboratory bench.",
+      caption:
+        "Environmental monitoring labs coordinate intake, incubation, and reporting across teams — the same operational rhythm BioSure supports digitally.",
+    },
+    workflow: {
+      src: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1600&q=82",
+      alt: "Laboratory technician documenting environmental culture plates and analytical workflow.",
+      caption:
+        "Culture work, CFU review, and sign-off mirror the four-step path your clients and analysts follow in BioSure.",
+    },
+    compare: {
+      src: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1600&q=82",
+      alt: "Microscopy and analytical review station in a quality control laboratory.",
+      caption:
+        "Microscopy-grade traceability and structured data beat spreadsheet sprawl when auditors ask for the full story.",
+    },
+    roi: {
+      src: "/marketing/landing-roi-v2.jpg",
+      alt: "Laboratory bench with analytical workflow documentation and equipment.",
+      caption:
+        "Automating manual handoffs frees analysts for higher-value review — where ROI on a modern LIMS shows up fastest.",
+    },
+    testimonials: {
+      src: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1600&q=82",
+      alt: "Laboratory glassware and environmental science testing setup.",
+      caption:
+        "Independent labs and compounders standardize on digital CoCs and portals to grow volume without growing chaos.",
+    },
+  },
   features: {
-    badge: "⚡ Features",
+    badge: { iconId: "features" as const, label: "Features" },
     title: "Everything your lab needs. Nothing you don't.",
     sub:
       "BioSure replaces a messy stack of spreadsheets, Word docs, and email threads with a single, purpose-built platform that your whole team — and your clients — can use.",
@@ -107,7 +141,7 @@ export const biosureLanding = {
     ],
   },
   workflow: {
-    badge: "🔄 Workflow",
+    badge: { iconId: "workflow" as const, label: "Workflow" },
     title: "From sample intake to delivered report — automated.",
     sub:
       "BioSure maps your real-world environmental monitoring workflow into a clean, sequential process your whole team can follow.",
@@ -139,7 +173,7 @@ export const biosureLanding = {
     ],
   },
   compare: {
-    badge: "📐 Comparison",
+    badge: { iconId: "compare" as const, label: "Comparison" },
     title: "Why labs choose BioSure over the alternatives",
     sub:
       "Enterprise LIMS cost 5–10× more and take months to implement. Spreadsheets don't scale. BioSure is purpose-built, affordable, and live in days.",

@@ -11,7 +11,14 @@ export type FeatureIconId =
 
 export type RoiIconId = "timeSaved" | "noCalls" | "compliance";
 
-export type MarketingIconId = "earlyAdopter" | "roi" | "pricing" | "customers";
+export type MarketingIconId =
+  | "earlyAdopter"
+  | "roi"
+  | "pricing"
+  | "customers"
+  | "features"
+  | "workflow"
+  | "compare";
 
 type SvgProps = Omit<ComponentProps<"svg">, "children">;
 
@@ -185,12 +192,51 @@ function CustomersChatIcon(props: SvgProps) {
   );
 }
 
+/** Section badge: feature modules / capability grid */
+function SectionFeaturesIcon(props: SvgProps) {
+  return (
+    <svg {...baseSvgProps(props)}>
+      <rect x="3" y="3" width="7" height="7" rx="1.5" />
+      <rect x="14" y="3" width="7" height="7" rx="1.5" />
+      <rect x="3" y="14" width="7" height="7" rx="1.5" />
+      <rect x="14" y="14" width="7" height="7" rx="1.5" />
+    </svg>
+  );
+}
+
+/** Section badge: top-to-bottom process steps (timeline / pipeline) */
+function SectionWorkflowIcon(props: SvgProps) {
+  return (
+    <svg {...baseSvgProps(props)}>
+      <circle cx="12" cy="6" r="2.5" />
+      <path d="M12 8.5v1" />
+      <circle cx="12" cy="12" r="2.5" />
+      <path d="M12 14.5v1" />
+      <circle cx="12" cy="18" r="2.5" />
+    </svg>
+  );
+}
+
+/** Section badge: side-by-side comparison */
+function SectionCompareIcon(props: SvgProps) {
+  return (
+    <svg {...baseSvgProps(props)}>
+      <rect x="3" y="4" width="7" height="16" rx="1.5" />
+      <rect x="14" y="4" width="7" height="16" rx="1.5" />
+      <path d="M12 8v8" />
+    </svg>
+  );
+}
+
 const marketingIcons: Record<MarketingIconId, (props: SvgProps) => React.JSX.Element> =
   {
     earlyAdopter: EarlyAdopterIcon,
     roi: RoiMoneyIcon,
     pricing: PricingTagIcon,
     customers: CustomersChatIcon,
+    features: SectionFeaturesIcon,
+    workflow: SectionWorkflowIcon,
+    compare: SectionCompareIcon,
   };
 
 export function MarketingIcon({

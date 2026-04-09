@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/marketing/site-footer";
 import { FeatureIcon, MarketingIcon, RoiIcon } from "@/components/marketing/feature-icons";
 import { LogoMarquee } from "@/components/marketing/logo-marquee";
 import { TestimonialCard } from "@/components/marketing/testimonial-card";
+import { LandingInfographicBlock } from "@/components/marketing/landing-infographic-block";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -166,7 +167,11 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                   <div className="relative z-10 mx-auto max-w-[1100px] px-6 py-20">
                     <Reveal delay={0.05}>
                       <div className="inline-flex items-center gap-2 text-[color:var(--accent)] text-[.75rem] font-semibold uppercase tracking-[.8px]">
-                        {biosureLanding.features.badge}
+                        <MarketingIcon
+                          id={biosureLanding.features.badge.iconId}
+                          className="h-4 w-4 shrink-0"
+                        />
+                        {biosureLanding.features.badge.label}
                       </div>
                       <h2 className="mt-4 font-[var(--font-serif)] text-[clamp(2rem,4vw,3.2rem)] leading-[1.1] tracking-[-1px] text-[color:var(--text)]">
                         {biosureLanding.features.title}
@@ -175,6 +180,15 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                         {biosureLanding.features.sub}
                       </p>
                     </Reveal>
+
+                    <div className="mt-12">
+                      <LandingInfographicBlock
+                        src={biosureLanding.landingInfographics.features.src}
+                        alt={biosureLanding.landingInfographics.features.alt}
+                        caption={biosureLanding.landingInfographics.features.caption}
+                        attribution={biosureLanding.landingInfographics.photoCreditLine}
+                      />
+                    </div>
 
                     <div className="mt-14 grid grid-cols-3 gap-4 lg:gap-5 max-md:grid-cols-1 md:grid-cols-2">
                       {biosureLanding.features.cards.map((card) => (
@@ -236,7 +250,11 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
           <div className="mx-auto max-w-[1100px]">
             <Reveal delay={0.05}>
               <div className="text-[color:var(--accent)] text-[.75rem] font-semibold uppercase tracking-[.8px] inline-flex items-center gap-2">
-                {biosureLanding.workflow.badge}
+                <MarketingIcon
+                  id={biosureLanding.workflow.badge.iconId}
+                  className="h-4 w-4 shrink-0"
+                />
+                {biosureLanding.workflow.badge.label}
               </div>
               <h2 className="mt-4 font-[var(--font-serif)] text-[clamp(2rem,4vw,3.2rem)] leading-[1.1] tracking-[-1px]">
                 {biosureLanding.workflow.title}
@@ -245,6 +263,15 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                 {biosureLanding.workflow.sub}
               </p>
             </Reveal>
+
+            <div className="mt-10">
+              <LandingInfographicBlock
+                src={biosureLanding.landingInfographics.workflow.src}
+                alt={biosureLanding.landingInfographics.workflow.alt}
+                caption={biosureLanding.landingInfographics.workflow.caption}
+                attribution={biosureLanding.landingInfographics.photoCreditLine}
+              />
+            </div>
 
             <div className="relative mt-14">
               {/* Connector line (desktop) */}
@@ -277,7 +304,11 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
             <div className="mx-auto max-w-[1100px]">
               <Reveal delay={0.05}>
                 <div className="text-[color:var(--accent)] text-[.75rem] font-semibold uppercase tracking-[.8px] inline-flex items-center gap-2">
-                  {biosureLanding.compare.badge}
+                  <MarketingIcon
+                    id={biosureLanding.compare.badge.iconId}
+                    className="h-4 w-4 shrink-0"
+                  />
+                  {biosureLanding.compare.badge.label}
                 </div>
                 <h2 className="mt-4 font-[var(--font-serif)] text-[clamp(2rem,4vw,3.2rem)] leading-[1.1] tracking-[-1px]">
                   {biosureLanding.compare.title}
@@ -286,6 +317,15 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                   {biosureLanding.compare.sub}
                 </p>
               </Reveal>
+
+              <div className="mt-10">
+                <LandingInfographicBlock
+                  src={biosureLanding.landingInfographics.compare.src}
+                  alt={biosureLanding.landingInfographics.compare.alt}
+                  caption={biosureLanding.landingInfographics.compare.caption}
+                  attribution={biosureLanding.landingInfographics.photoCreditLine}
+                />
+              </div>
 
               <div className="mt-14 overflow-hidden rounded-2xl border border-[color:var(--border)]">
                 <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr] bg-[rgba(255,255,255,0.03)] border-b border-[color:var(--border)]">
@@ -436,7 +476,7 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                           </Reveal>
                         </div>
 
-                        <div className="space-y-6">
+                        <div className="min-w-0 space-y-6">
                           <Reveal delay={0.15}>
                             <div className="premium-card rounded-2xl p-6">
                               <div className="text-[3rem] font-[var(--font-serif)] leading-none text-[color:var(--accent)]">
@@ -450,6 +490,14 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                               </div>
                             </div>
                           </Reveal>
+
+                          <LandingInfographicBlock
+                            src={biosureLanding.landingInfographics.roi.src}
+                            alt={biosureLanding.landingInfographics.roi.alt}
+                            caption={biosureLanding.landingInfographics.roi.caption}
+                            attribution={biosureLanding.landingInfographics.photoCreditLine}
+                            layout="card"
+                          />
 
                           <div className="space-y-4">
                             {biosureLanding.roi.bullets.map((b, idx) => (
@@ -602,6 +650,15 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                 </p>
               </div>
             </Reveal>
+
+            <div className="mt-10">
+              <LandingInfographicBlock
+                src={biosureLanding.landingInfographics.testimonials.src}
+                alt={biosureLanding.landingInfographics.testimonials.alt}
+                caption={biosureLanding.landingInfographics.testimonials.caption}
+                attribution={biosureLanding.landingInfographics.photoCreditLine}
+              />
+            </div>
 
             <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
               {biosureLanding.testimonials.layout.cards
