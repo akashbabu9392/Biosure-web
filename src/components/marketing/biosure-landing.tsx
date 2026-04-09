@@ -1,4 +1,5 @@
 import { biosureLanding, type BiosureLandingVariant } from "@/constants/ui";
+import { routes } from "@/constants/routes";
 import { Reveal } from "@/components/animations/reveal";
 import { SiteHeader } from "@/components/marketing/site-header";
 import { SiteFooter } from "@/components/marketing/site-footer";
@@ -16,10 +17,19 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
 
   return (
     <div className={themeClass}>
-      <SiteHeader />
+      <SiteHeader
+        logoBasePath={
+          variant === "company"
+            ? routes.marketing.company
+            : routes.marketing.labs
+        }
+      />
       <main className="pt-16">
         {/* HERO */}
-        <section className="relative flex min-h-[92vh] flex-col items-center justify-center overflow-hidden px-6 pb-20 pt-16 text-center">
+        <section
+          id={biosureLanding.hero.sectionId}
+          className="relative flex min-h-[92vh] scroll-mt-16 flex-col items-center justify-center overflow-hidden px-6 pb-20 pt-16 text-center"
+        >
           {/* Radial glows */}
           <div className="pointer-events-none absolute left-1/2 top-[-140px] h-[600px] w-[900px] translate-x-[-50%] rounded-full bg-[radial-gradient(ellipse_at_50%_0%,rgba(0,194,168,0.18)_0%,transparent_70%)]" />
           <div className="pointer-events-none absolute bottom-[-140px] right-[-140px] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,rgba(0,112,243,0.1)_0%,transparent_65%)]" />
@@ -503,15 +513,15 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                   <Reveal key={card.name} delay={0.1} y={18}>
                     <div
                       className={[
-                        "relative overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[var(--surface)] p-7 transition hover:border-[var(--border-bright)] hover:-translate-y-[4px]",
+                        "relative rounded-2xl border border-[color:var(--border)] bg-[var(--surface)] p-7 transition hover:border-[var(--border-bright)] hover:-translate-y-[4px]",
                         card.emphasis === "featured"
                           ? "border-[rgba(0,194,168,0.35)] bg-[linear-gradient(145deg,rgba(0,194,168,0.05),var(--surface))]"
                           : "",
                       ].join(" ")}
                     >
                       {card.emphasis === "featured" ? (
-                        <div className="absolute left-1/2 top-[-12px] -translate-x-1/2 rounded-full bg-[color:var(--accent)] px-4 py-1 text-[.68rem] font-bold">
-                          Most Popular
+                        <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-[color:var(--accent)] px-4 py-1 text-[.68rem] font-bold text-[#061210] shadow-[0_2px_8px_rgba(0,0,0,0.12)]">
+                          {biosureLanding.pricing.featuredBadgeLabel}
                         </div>
                       ) : null}
 

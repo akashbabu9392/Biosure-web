@@ -35,6 +35,8 @@ export const biosureLanding = {
       "Client portal always free",
       "Setup in under a day",
     ],
+    /** Anchor for nav logo / "back to hero" scroll on the marketing landing */
+    sectionId: "top",
   },
   logos: {
     label: "Trusted by independent labs and compounding pharmacies",
@@ -291,6 +293,8 @@ export const biosureLanding = {
       message:
         "First 50 paying customers get 25% off for 12 months. | Annual commitment saves ~10% | Non-profits: 30% discount",
     },
+    /** Shown on the featured tier card above the plan name */
+    featuredBadgeLabel: "Most Popular",
     cards: [
       {
         name: "Free",

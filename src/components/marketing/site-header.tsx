@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { biosureLanding } from "@/constants/ui";
 import { getBiosureLogoSvg } from "@/lib/get-biosure-logo-svg";
+import { SiteLogoLink } from "@/components/marketing/site-logo-link";
 
-export async function SiteHeader() {
+export async function SiteHeader({ logoBasePath }: { logoBasePath: string }) {
   const logoSvg = await getBiosureLogoSvg();
 
   return (
@@ -10,14 +11,18 @@ export async function SiteHeader() {
       className="fixed left-0 right-0 top-0 z-50 h-16 border-b border-[color:var(--header-border)] bg-[color:var(--header-bg)]"
     >
       <div className="mx-auto flex h-full w-full max-w-[1100px] items-center justify-between px-5">
-        <Link href="/" className="flex items-center">
+        <SiteLogoLink
+          logoBasePath={logoBasePath}
+          sectionId={biosureLanding.hero.sectionId}
+          className="flex items-center"
+        >
           <span
             aria-label="BioSure logo"
             role="img"
             className="biosure-logo relative block h-10 w-[160px] sm:h-11 sm:w-[180px]"
             dangerouslySetInnerHTML={{ __html: logoSvg }}
           />
-        </Link>
+        </SiteLogoLink>
 
         <nav className="hidden items-center gap-1 md:flex">
           <ul className="flex items-center gap-1">
