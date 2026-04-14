@@ -3,6 +3,8 @@ export const routes = {
     labs: "/",
     company: "/company",
     organizations: "/organizations",
+    privacyPolicy: "/privacy-policy",
+    termsAndConditions: "/terms-and-conditions",
   },
 } as const;
 

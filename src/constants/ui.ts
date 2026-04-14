@@ -1,3 +1,5 @@
+import { routes } from "@/constants/routes";
+
 export const biosureLanding = {
   multi: {
     switcherLabel: "Choose workspace",
@@ -530,7 +532,12 @@ export const biosureLanding = {
         { id: "github", label: "GitHub", href: "#" },
       ],
     },
-    copyright: "© 2026 BioSure · All rights reserved",
+    legalLinks: [
+      { label: "Privacy Policy", href: routes.marketing.privacyPolicy },
+      { label: "Terms & Conditions", href: routes.marketing.termsAndConditions },
+    ],
+    copyright:
+      "© 2026 BioSure Lab Portal. Operated by RainerTek. All rights reserved.",
     bottomNote: "Built for the labs that keep compounding pharmacies safe",
   },
 } as const;

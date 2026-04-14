@@ -93,8 +93,37 @@ export async function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-4 border-t border-[color:var(--border)] pt-6 md:flex-row md:items-center md:justify-between">
-          <div className="text-xs text-[color:var(--muted)]">
-            {biosureLanding.footer.copyright}
+          <div className="flex flex-col gap-3 text-xs text-[color:var(--muted)] sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-2">
+            <span>{biosureLanding.footer.copyright}</span>
+            <span
+              className="hidden text-[color:var(--border-bright)] sm:inline"
+              aria-hidden
+            >
+              ·
+            </span>
+            <nav
+              aria-label="Legal"
+              className="flex flex-wrap items-center gap-x-1 gap-y-1"
+            >
+              {biosureLanding.footer.legalLinks.map((link, index) => (
+                <span key={link.href} className="inline-flex items-center">
+                  {index > 0 ? (
+                    <span
+                      className="mx-1 text-[color:var(--border-bright)]"
+                      aria-hidden
+                    >
+                      ·
+                    </span>
+                  ) : null}
+                  <Link
+                    href={link.href}
+                    className="inline-flex min-h-[44px] items-center rounded-md px-2 py-2 text-[color:var(--muted)] underline-offset-4 transition hover:text-[color:var(--accent)] hover:underline sm:min-h-0 sm:px-1"
+                  >
+                    {link.label}
+                  </Link>
+                </span>
+              ))}
+            </nav>
           </div>
 
           <div className="flex items-center gap-3">
