@@ -1,0 +1,274 @@
+<div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #e8eaed; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); width: 100%; max-width: 1400px; margin: 0 auto;">
+
+  <!-- Chrome browser bar -->
+  <div style="background: #dee1e6; padding: 10px 12px 0; border-radius: 12px 12px 0 0;">
+    <!-- Traffic lights + tab row -->
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+      <div style="display: flex; gap: 6px; align-items: center;">
+        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
+        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd44;"></div>
+        <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
+      </div>
+      <div style="display: flex; align-items: flex-end; gap: 2px; margin-left: 8px;">
+        <!-- Active tab -->
+        <div style="background: #f1f3f4; border-radius: 8px 8px 0 0; padding: 6px 14px 8px; font-size: 12px; color: #3c4043; display: flex; align-items: center; gap: 8px; min-width: 190px;">
+          <img src="./biosurelab-favicon.svg" alt="BioSureLab" width="14" height="14" style="flex-shrink: 0; display: block;" />
+          <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #3c4043; font-size: 12px;">Dashboard | Biosure Labs</span>
+          <span style="margin-left: auto; font-size: 11px; color: #888;">✕</span>
+        </div>
+        <div style="width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #5f6368; cursor: pointer; margin-left: 4px;">+</div>
+      </div>
+    </div>
+
+    <!-- Address bar row -->
+    <div style="background: #f1f3f4; border-radius: 8px 8px 0 0; padding: 7px 12px; display: flex; align-items: center; gap: 8px;">
+      <!-- Nav buttons -->
+      <div style="display: flex; gap: 2px; align-items: center;">
+        <div style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #5f6368; font-size: 18px; cursor: pointer;">‹</div>
+        <div style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 18px; cursor: pointer;">›</div>
+        <div style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #5f6368; font-size: 15px; cursor: pointer;">↺</div>
+      </div>
+
+      <!-- URL bar -->
+      <div style="flex: 1; background: #fff; border-radius: 20px; padding: 5px 14px; display: flex; align-items: center; gap: 8px; font-size: 13px; border: 0.5px solid #dadce0;">
+        <!-- network / globe icon -->
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;">
+          <circle cx="12" cy="12" r="9" stroke="#34a853" stroke-width="2"/>
+          <path d="M3 12h18" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 3c3 3 3 15 0 18" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 3c-3 3-3 15 0 18" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span style="color: #202124; font-size: 13px;">lab.biosurelab.com/dashboard</span>
+        <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+          <!-- bookmark icon -->
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" fill="#5f6368"/></svg>
+          <!-- search icon -->
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#5f6368"/></svg>
+        </div>
+      </div>
+
+      <!-- Right icons (normal, not incognito) -->
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <!-- browser menu icon -->
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#5f6368"><rect x="3" y="5" width="18" height="2" rx="1"/><rect x="3" y="11" width="18" height="2" rx="1"/><rect x="3" y="17" width="18" height="2" rx="1"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard body -->
+  <div style="display: flex; height: 620px; background: #111c2e;">
+
+    <!-- SIDEBAR — exact match to screenshot -->
+    <div style="width: 205px; background: #0c1829; display: flex; flex-direction: column; flex-shrink: 0;">
+
+      <!-- Logo area -->
+      <div style="padding: 18px 16px 16px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <img
+            src="./BiosureLab-logo-dark.svg"
+            alt="BioSureLab"
+            width="140"
+            height="22"
+            style="display: block; flex-shrink: 0; object-fit: contain; filter: brightness(1.25) contrast(1.08) drop-shadow(0 0 12px rgba(120, 200, 255, 0.28)) drop-shadow(0 0 2px rgba(255,255,255,0.14));"
+          />
+        </div>
+      </div>
+
+      <!-- MENU label -->
+      <div style="padding: 0 16px 6px;">
+        <span style="font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 1.2px; font-weight: 500;">MENU</span>
+      </div>
+
+      <!-- Nav items — exact icons from screenshot -->
+      <div style="padding: 0 8px; display: flex; flex-direction: column; gap: 1px; flex: 1;">
+
+        <!-- Dashboard (active) — 4-square grid icon -->
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; background: rgba(99,131,255,0.2); cursor: pointer;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#6b8cff" stroke-width="2"/>
+            <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#6b8cff" stroke-width="2"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#6b8cff" stroke-width="2"/>
+            <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#6b8cff" stroke-width="2"/>
+          </svg>
+          <span style="color: #6b8cff; font-size: 13px; font-weight: 500;">Dashboard</span>
+        </div>
+
+        <!-- Orders — box icon (matches screenshot) -->
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; cursor: pointer;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M21 8l-9-5-9 5 9 5 9-5z" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 8v10l9 5 9-5V8" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 13v10" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span style="color: rgba(180,200,230,0.5); font-size: 13px;">Orders</span>
+        </div>
+
+        <!-- Reports — document/file icon -->
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; cursor: pointer;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8l-5-5z" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 3v5h5" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 13h6" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M9 17h6" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span style="color: rgba(180,200,230,0.5); font-size: 13px;">Reports</span>
+        </div>
+
+        <!-- Companies — building icon (matches screenshot) -->
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; cursor: pointer;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M4 21V7a2 2 0 012-2h6v16" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 21V5a2 2 0 012-2h2a2 2 0 012 2v16" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 9h.01M8 13h.01M8 17h.01" stroke="rgba(180,200,230,0.5)" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M17 9h.01M17 13h.01M17 17h.01" stroke="rgba(180,200,230,0.5)" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M12 21v-4a1 1 0 011-1h1a1 1 0 011 1v4" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span style="color: rgba(180,200,230,0.5); font-size: 13px;">Companies</span>
+        </div>
+
+        <!-- Calendar — calendar icon -->
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; cursor: pointer;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="4" width="18" height="18" rx="2" stroke="rgba(180,200,230,0.5)" stroke-width="1.8"/>
+            <path d="M16 2v4M8 2v4M3 10h18" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span style="color: rgba(180,200,230,0.5); font-size: 13px;">Calendar</span>
+        </div>
+
+        <!-- Activity Logs — clock icon -->
+        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; cursor: pointer;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="rgba(180,200,230,0.5)" stroke-width="1.8"/>
+            <path d="M12 7v5l3.5 3.5" stroke="rgba(180,200,230,0.5)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span style="color: rgba(180,200,230,0.5); font-size: 13px;">Activity Logs</span>
+        </div>
+
+      </div>
+
+      <!-- Bottom user profile — "LA · Lab Admin" -->
+      <div style="padding: 12px 14px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 10px;">
+        <div style="width: 32px; height: 32px; border-radius: 50%; background: #1e3d6e; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #a0c0e0; font-weight: 600; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.1);">LA</div>
+        <span style="color: rgba(200,220,240,0.7); font-size: 12px; font-weight: 500;">Lab Admin</span>
+        <div style="margin-left: auto;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke="rgba(255,255,255,0.3)" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN content -->
+    <div style="flex: 1; display: flex; flex-direction: column; background: #111c2e; overflow: hidden;">
+
+      <!-- Top action bar -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 22px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <!-- hamburger -->
+        <div style="display: flex; flex-direction: column; gap: 4px; cursor: pointer; padding: 4px;">
+          <div style="height: 2px; width: 22px; background: rgba(255,255,255,0.45); border-radius: 1px;"></div>
+          <div style="height: 2px; width: 14px; background: rgba(255,255,255,0.45); border-radius: 1px;"></div>
+        </div>
+        <!-- bell -->
+        <div style="width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="rgba(200,220,240,0.6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.73 21a2 2 0 01-3.46 0" stroke="rgba(200,220,240,0.6)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+
+      <!-- Stats + content area -->
+      <div style="flex: 1; overflow-y: auto; padding: 20px 22px;">
+
+        <!-- 4 stat cards -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px;">
+
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px 18px;">
+            <div style="font-size: 9px; color: rgba(255,255,255,0.35); letter-spacing: 0.8px; font-weight: 500; margin-bottom: 8px;">TOTAL COMPANIES</div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 30px; font-weight: 700; color: #ddeaf8; line-height: 1;">1</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="opacity:0.4;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#88b8ff" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#88b8ff" stroke-width="1.6"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#88b8ff" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px 18px;">
+            <div style="font-size: 9px; color: rgba(255,255,255,0.35); letter-spacing: 0.8px; font-weight: 500; margin-bottom: 8px;">TOTAL LAB USERS</div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 30px; font-weight: 700; color: #ddeaf8; line-height: 1;">2</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="opacity:0.4;"><circle cx="12" cy="8" r="4" stroke="#88b8ff" stroke-width="1.6"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="#88b8ff" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px 18px;">
+            <div style="font-size: 9px; color: rgba(255,255,255,0.35); letter-spacing: 0.8px; font-weight: 500; margin-bottom: 8px;">TOTAL COMPANY USERS</div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 30px; font-weight: 700; color: #ddeaf8; line-height: 1;">3</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="opacity:0.4;"><circle cx="12" cy="7" r="4" stroke="#88b8ff" stroke-width="1.6"/><path d="M5.5 21c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5" stroke="#88b8ff" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px 18px;">
+            <div style="font-size: 9px; color: rgba(255,255,255,0.35); letter-spacing: 0.8px; font-weight: 500; margin-bottom: 8px;">TOTAL REPORTS</div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 30px; font-weight: 700; color: #ddeaf8; line-height: 1;">3</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="opacity:0.4;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="#88b8ff" stroke-width="1.6" stroke-linecap="round"/><path d="M14 2v6h6" stroke="#88b8ff" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="13" x2="8" y2="13" stroke="#88b8ff" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="17" x2="8" y2="17" stroke="#88b8ff" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Recent Reports section -->
+        <div>
+          <div style="font-size: 15px; font-weight: 500; color: #c8daf0; margin-bottom: 14px;">Recent Reports</div>
+
+          <!-- Reports table -->
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; overflow: hidden;">
+
+            <!-- Header -->
+            <div style="display: grid; grid-template-columns: 145px 1fr 200px 185px 110px; padding: 11px 20px; border-bottom: 1px solid rgba(255,255,255,0.07); background: rgba(0,0,0,0.12);">
+              <div style="font-size: 11px; color: rgba(255,255,255,0.32); font-weight: 500; letter-spacing: 0.3px;">Company</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.32); font-weight: 500; letter-spacing: 0.3px;">Report Title</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.32); font-weight: 500; letter-spacing: 0.3px;">Report Code</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.32); font-weight: 500; letter-spacing: 0.3px;">Date</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.32); font-weight: 500; letter-spacing: 0.3px;">Status</div>
+            </div>
+
+            <!-- Row 1 -->
+            <div style="display: grid; grid-template-columns: 145px 1fr 200px 185px 110px; padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.04); align-items: center;">
+              <div style="font-size: 13px; color: #b8d0ea; font-weight: 500;">Tesla Diagnostics</div>
+              <div style="font-size: 13px; color: rgba(190,215,240,0.7); padding-right: 12px;">USP 797 Report – OR260413-001-R2</div>
+              <div style="font-size: 11.5px; color: rgba(180,210,240,0.4); font-family: 'Courier New', monospace; letter-spacing: -0.2px;">TD-JRM22-90531-260413-001</div>
+              <div style="font-size: 12px; color: rgba(200,220,240,0.45);">Apr 13, 2026, 10:17 AM</div>
+              <div><span style="display: inline-flex; align-items: center; gap: 5px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 999px;">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#4ade80" stroke-width="2.5"/><path d="M7 12l3.5 3.5L17 8" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Approved
+              </span></div>
+            </div>
+
+            <!-- Row 2 -->
+            <div style="display: grid; grid-template-columns: 145px 1fr 200px 185px 110px; padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.04); align-items: center; background: rgba(255,255,255,0.01);">
+              <div style="font-size: 13px; color: #b8d0ea; font-weight: 500;">Tesla Diagnostics</div>
+              <div style="font-size: 13px; color: rgba(190,215,240,0.7);">Test</div>
+              <div style="font-size: 11.5px; color: rgba(180,210,240,0.4); font-family: 'Courier New', monospace;">TD-HE-260409-002</div>
+              <div style="font-size: 12px; color: rgba(200,220,240,0.45);">Apr 09, 2026, 05:59 AM</div>
+              <div><span style="display: inline-flex; align-items: center; gap: 5px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 999px;">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#4ade80" stroke-width="2.5"/><path d="M7 12l3.5 3.5L17 8" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Approved
+              </span></div>
+            </div>
+
+            <!-- Row 3 -->
+            <div style="display: grid; grid-template-columns: 145px 1fr 200px 185px 110px; padding: 14px 20px; align-items: center;">
+              <div style="font-size: 13px; color: #b8d0ea; font-weight: 500;">Tesla Diagnostics</div>
+              <div style="font-size: 13px; color: rgba(190,215,240,0.7);">USP 797 Report – OR260407-001</div>
+              <div style="font-size: 11.5px; color: rgba(180,210,240,0.4); font-family: 'Courier New', monospace;">TD-HE-260407-001</div>
+              <div style="font-size: 12px; color: rgba(200,220,240,0.45);">Apr 07, 2026, 02:54 AM</div>
+              <div><span style="display: inline-flex; align-items: center; gap: 5px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 999px;">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#4ade80" stroke-width="2.5"/><path d="M7 12l3.5 3.5L17 8" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Approved
+              </span></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
