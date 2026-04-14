@@ -39,18 +39,12 @@ export async function SiteHeader({ logoBasePath }: { logoBasePath: string }) {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="flex items-center">
           <Link
             href="#"
-            className="rounded-xl border border-[rgba(255,255,255,0.14)] bg-transparent px-4 py-2 text-sm font-medium text-[color:var(--text)] transition hover:bg-[rgba(255,255,255,0.06)]"
+            className="rounded-xl bg-[color:var(--accent)] px-4 py-2.5 text-sm font-semibold text-[#061210] transition hover:opacity-90 min-h-[44px] min-w-[44px] items-center justify-center inline-flex sm:py-2"
           >
-            {biosureLanding.nav.signInLabel}
-          </Link>
-          <Link
-            href="#"
-            className="rounded-xl bg-[color:var(--accent)] px-4 py-2 text-sm font-semibold text-[#061210] transition hover:opacity-90"
-          >
-            {biosureLanding.nav.primaryCtaLabel}
+            {biosureLanding.nav.watchDemoLabel}
           </Link>
         </div>
       </div>

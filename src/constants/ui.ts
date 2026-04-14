@@ -15,8 +15,7 @@ export const biosureLanding = {
       { id: "pricing", label: "Pricing" },
       { id: "testimonials", label: "Customers" },
     ],
-    signInLabel: "Sign in",
-    primaryCtaLabel: "Start for free →",
+    watchDemoLabel: "Watch demo",
   },
   hero: {
     badge: "Purpose-built for Environmental Monitoring Labs",
