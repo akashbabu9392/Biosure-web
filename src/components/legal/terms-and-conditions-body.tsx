@@ -21,21 +21,21 @@ const T = {
 } as const;
 
 export const termsAndConditionsToc = [
-  { id: T.s1, label: "1. Agreement to Terms" },
-  { id: T.s2, label: "2. Description of Service" },
-  { id: T.s3, label: "3. User Accounts" },
-  { id: T.s4, label: "4. Subscription Plans and Billing" },
-  { id: T.s5, label: "5. Acceptable Use" },
-  { id: T.s6, label: "6. Data Ownership and Intellectual Property" },
-  { id: T.s7, label: "7. Report Generation and Electronic Signatures" },
-  { id: T.s8, label: "8. Service Availability and Support" },
-  { id: T.s9, label: "9. Third-Party Services" },
-  { id: T.s10, label: "10. Limitation of Liability" },
-  { id: T.s11, label: "11. Indemnification" },
-  { id: T.s12, label: "12. Termination" },
-  { id: T.s13, label: "13. Data Protection and Security" },
-  { id: T.s14, label: "14. General Provisions" },
-  { id: T.s15, label: "15. Contact Us" },
+  { id: T.s1, label: "Agreement to Terms" },
+  { id: T.s2, label: "Description of Service" },
+  { id: T.s3, label: "User Accounts" },
+  { id: T.s4, label: "Subscription Plans and Billing" },
+  { id: T.s5, label: "Acceptable Use" },
+  { id: T.s6, label: "Data Ownership and Intellectual Property" },
+  { id: T.s7, label: "Report Generation and Electronic Signatures" },
+  { id: T.s8, label: "Service Availability and Support" },
+  { id: T.s9, label: "Third-Party Services" },
+  { id: T.s10, label: "Limitation of Liability" },
+  { id: T.s11, label: "Indemnification" },
+  { id: T.s12, label: "Termination" },
+  { id: T.s13, label: "Data Protection and Security" },
+  { id: T.s14, label: "General Provisions" },
+  { id: T.s15, label: "Contact Us" },
 ] as const;
 
 function Section({

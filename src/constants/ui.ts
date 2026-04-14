@@ -524,13 +524,6 @@ export const biosureLanding = {
         ],
       },
     ],
-    social: {
-      items: [
-        { id: "x", label: "X", href: "#" },
-        { id: "linkedin", label: "LinkedIn", href: "#" },
-        { id: "github", label: "GitHub", href: "#" },
-      ],
-    },
     legalLinks: [
       { label: "Privacy Policy", href: routes.marketing.privacyPolicy },
       { label: "Terms & Conditions", href: routes.marketing.termsAndConditions },

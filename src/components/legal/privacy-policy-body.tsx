@@ -18,18 +18,18 @@ const P = {
 } as const;
 
 export const privacyPolicyToc = [
-  { id: P.s1, label: "1. Introduction" },
-  { id: P.s2, label: "2. Information We Collect" },
-  { id: P.s3, label: "3. How We Use Your Information" },
-  { id: P.s4, label: "4. How We Store & Protect Your Information" },
-  { id: P.s5, label: "5. Data Sharing & Disclosure" },
-  { id: P.s6, label: "6. Data Retention" },
-  { id: P.s7, label: "7. Your Rights & Choices" },
-  { id: P.s8, label: "8. Cookies & Tracking Technologies" },
-  { id: P.s9, label: "9. Children's Privacy" },
-  { id: P.s10, label: "10. International Data Transfers" },
-  { id: P.s11, label: "11. Changes to This Privacy Policy" },
-  { id: P.s12, label: "12. Contact Us" },
+  { id: P.s1, label: "Introduction" },
+  { id: P.s2, label: "Information We Collect" },
+  { id: P.s3, label: "How We Use Your Information" },
+  { id: P.s4, label: "How We Store & Protect Your Information" },
+  { id: P.s5, label: "Data Sharing & Disclosure" },
+  { id: P.s6, label: "Data Retention" },
+  { id: P.s7, label: "Your Rights & Choices" },
+  { id: P.s8, label: "Cookies & Tracking Technologies" },
+  { id: P.s9, label: "Children's Privacy" },
+  { id: P.s10, label: "International Data Transfers" },
+  { id: P.s11, label: "Changes to This Privacy Policy" },
+  { id: P.s12, label: "Contact Us" },
 ] as const;
 
 function Section({

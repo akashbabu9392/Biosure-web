@@ -192,10 +192,10 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
 
                     <div className="mt-14 grid grid-cols-3 gap-4 lg:gap-5 max-md:grid-cols-1 md:grid-cols-2">
                       {biosureLanding.features.cards.map((card) => (
-                        <Reveal key={card.title} delay={0.1} y={30}>
+                        <Reveal key={card.title} delay={0.1} y={30} className="h-full">
                           <div
                             className={[
-                              "premium-card group relative overflow-hidden rounded-2xl p-7 hover:-translate-y-[3px]",
+                              "premium-card group relative flex h-full flex-col overflow-hidden rounded-2xl p-7 hover:-translate-y-[3px]",
                               card.layout === "span2Tall" ? "md:col-span-2 md:min-h-[280px]" : "",
                             ].join(" ")}
                           >
@@ -209,7 +209,7 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                             <div className="mb-2 font-[var(--font-serif)] text-[1.15rem] text-[color:var(--text)]">
                               {card.title}
                             </div>
-                            <div className="text-[.85rem] leading-[1.65] text-[color:var(--muted)]">
+                            <div className="flex-1 text-[.85rem] leading-[1.65] text-[color:var(--muted)]">
                               {card.desc}
                             </div>
                             {card.layout === "span2Tall" ? (
@@ -231,8 +231,10 @@ export function BiosureLanding({ variant }: { variant: BiosureLandingVariant }) 
                                 </div>
                               </div>
                             ) : null}
-                            <div className="mt-4 inline-flex rounded-full border border-[rgba(0,194,168,0.15)] bg-[rgba(0,194,168,0.08)] px-3 py-1 text-[.7rem] font-semibold text-[color:var(--accent)]">
-                              {card.tag}
+                            <div className="mt-auto pt-4">
+                              <div className="inline-flex rounded-full border border-[rgba(0,194,168,0.15)] bg-[rgba(0,194,168,0.08)] px-3 py-1 text-[.7rem] font-semibold text-[color:var(--accent)]">
+                                {card.tag}
+                              </div>
                             </div>
                           </div>
                         </Reveal>

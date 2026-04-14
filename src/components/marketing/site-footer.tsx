@@ -2,46 +2,6 @@ import Link from "next/link";
 import { biosureLanding } from "@/constants/ui";
 import { getBiosureLogoSvg } from "@/lib/get-biosure-logo-svg";
 
-function SocialIcon({ id }: { id: string }) {
-  const baseProps = {
-    viewBox: "0 0 24 24",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: 2,
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
-    "aria-hidden": true,
-    className: "h-4 w-4",
-  };
-
-  if (id === "x") {
-    return (
-      <svg {...baseProps}>
-        <path d="M4 4l16 16" />
-        <path d="M20 4L4 20" />
-      </svg>
-    );
-  }
-
-  if (id === "linkedin") {
-    return (
-      <svg {...baseProps}>
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v2" />
-        <path d="M2 9h4v12H2z" />
-        <path d="M4 4a2 2 0 1 0 0 .01" />
-      </svg>
-    );
-  }
-
-  // github
-  return (
-    <svg {...baseProps}>
-      <path d="M9 19c-4 1.5-4-2.5-6-3" />
-      <path d="M15 22v-3.5c0-1 .1-1.4-.5-2 2.5-.3 5-1.2 5-5.5 0-1.2-.4-2.2-1.1-3.1.1-.3.5-1.6-.1-3.3 0 0-1-.3-3.3 1.1a11.4 11.4 0 0 0-6 0C6.7 2.7 5.7 3 5.7 3c-.6 1.7-.2 3-.1 3.3C4.9 7.2 4.5 8.2 4.5 9.4c0 4.3 2.5 5.2 5 5.5-.4.4-.6.9-.6 1.8V22" />
-    </svg>
-  );
-}
-
 export async function SiteFooter() {
   const logoSvg = await getBiosureLogoSvg();
 
@@ -92,26 +52,20 @@ export async function SiteFooter() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-[color:var(--border)] pt-6 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-3 text-xs text-[color:var(--muted)] sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-2">
-            <span>{biosureLanding.footer.copyright}</span>
-            <span
-              className="hidden text-[color:var(--border-bright)] sm:inline"
-              aria-hidden
-            >
-              ·
-            </span>
+        <div className="border-t border-[color:var(--border)] pt-6">
+          <div className="grid gap-3 text-xs text-[color:var(--muted)] md:grid-cols-[1fr_auto_1fr] md:items-center">
+            <div className="flex justify-center text-center md:justify-start md:text-left">
+              <span>{biosureLanding.footer.copyright}</span>
+            </div>
+
             <nav
               aria-label="Legal"
-              className="flex flex-wrap items-center gap-x-1 gap-y-1"
+              className="flex flex-wrap items-center justify-center gap-x-1 gap-y-1"
             >
               {biosureLanding.footer.legalLinks.map((link, index) => (
                 <span key={link.href} className="inline-flex items-center">
                   {index > 0 ? (
-                    <span
-                      className="mx-1 text-[color:var(--border-bright)]"
-                      aria-hidden
-                    >
+                    <span className="mx-1 text-[color:var(--border-bright)]" aria-hidden>
                       ·
                     </span>
                   ) : null}
@@ -124,19 +78,8 @@ export async function SiteFooter() {
                 </span>
               ))}
             </nav>
-          </div>
 
-          <div className="flex items-center gap-3">
-            {biosureLanding.footer.social.items.map((s) => (
-              <a
-                key={s.id}
-                href={s.href}
-                aria-label={s.label}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--border)] text-[color:var(--muted)] transition hover:border-[color:var(--border-bright)] hover:text-[color:var(--text)]"
-              >
-                <SocialIcon id={s.id} />
-              </a>
-            ))}
+            <div className="hidden md:block" aria-hidden />
           </div>
         </div>
       </div>
